@@ -50,5 +50,7 @@ return sum;
 
 // Задание 3
 function worker2(arr) {
-  // Ваш код
+  const max = Math.max.apply(null, arr);
+  const min = Math.min.apply(null, arr);
+  return Math.abs(max - min);
 }
