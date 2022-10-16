@@ -18,22 +18,35 @@ function getArrayParams(arr) {
 
 
 // Задание 2
-function worker(arr) {
-  let sum;
+let arrOfArr=[[1, 2, 3, 4], [108, 20, -10, -20]];
 
-  // Ваш код
+function makeWork(arrOfArr,func){
+  let max = -Infinity;
 
-  return sum;
-}
 
-function makeWork(arrOfArr, func) {
-  let max;
-
-  // Ваш кода
-  // for ...
-  
+  for(let i = 0; i < arrOfArr.length; i++) {
+    let result = worker(arrOfArr[i]);
+   console.log(result);
+    if(result > max){
+      max = result;
+    }
+   
+  }
   return max;
 }
+
+
+
+ function worker(arr) {
+   let sum = 0;
+  for(let i = 0; i < arr.length; i++) {
+     sum+= arr[i];
+    
+  }
+return sum;   
+}
+
+
 
 // Задание 3
 function worker2(arr) {
