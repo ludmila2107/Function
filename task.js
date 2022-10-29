@@ -18,14 +18,14 @@ function getArrayParams(arr) {
 
 
 // Задание 2
-let arrOfArr = [[1, 2, 3, 4], [108, 20, -10, -20]];
+
 
 function makeWork(arrOfArr, func) {
   let max = -Infinity;
 
 
   for (let i = 0; i < arrOfArr.length; i++) {
-    let result = worker(func);
+    let result = func(arrOfArr[i]);
     console.log(result);
     if (result > max) {
       max = result;
